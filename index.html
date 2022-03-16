@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <script src="js/app.js" defer></script>
     <link rel="stylesheet" href="css/index.css" />
   </head>
-  <header>
-    <div class="intro">
-      <h1>Welcome to Rock Paper Scissor GAME</h1>
-    </div>
-  </header>
   <body>
+    <header>
+      <div class="intro">
+        <h1>Welcome to Rock Paper Scissor GAME</h1>
+      </div>
+    </header>
+
     <div class="container">
       <div class="title-box">
         <h2 class="title">FIGHT</h2>
@@ -28,6 +29,7 @@
           </div>
           <div class="player-decision">
             <img
+              class="player-decision-img"
               src="img/—Pngtree—cool funny chicken mascot design_5562210.png"
               alt=""
             />
@@ -43,6 +45,7 @@
           </div>
           <div class="computer-decision">
             <img
+              class="computer-decision-img"
               src="img/—Pngtree—cool funny chicken mascot design_5562210.png"
               alt=""
             />
@@ -52,14 +55,42 @@
 
       <div class="option-box">
         <div class="box">
-          <img src="img/images.png" alt="" />
+          <img
+            src="img/images.png"
+            alt=""
+            data-value="scissor"
+            data-img="img/images.png"
+            onclick="choses(this)"
+          />
         </div>
         <div class="box">
-          <img src="img/—Pngtree—fist gesture hand sign_5865899.png" alt="" />
+          <img
+            src="img/—Pngtree—fist gesture hand sign_5865899.png"
+            alt=""
+            data-value="rock"
+            data-img="img/—Pngtree—fist gesture hand sign_5865899.png"
+            onclick="choses(this)"
+          />
         </div>
         <div class="box">
-          <img src="img/—Pngtree—old paper_1875486.png" alt="" />
+          <img
+            src="img/—Pngtree—old paper_1875486.png"
+            alt=""
+            data-value="paper"
+            data-img="img/—Pngtree—old paper_1875486.png"
+            onclick="choses(this)"
+          />
         </div>
+      </div>
+    </div>
+
+    <div class="bg-modal">
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <div class="title"></div>
+          <button class="close-button" onclick="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body"></div>
       </div>
     </div>
   </body>
